@@ -1,0 +1,72 @@
+
+  <!DOCTYPE html>
+<html>
+    <head>
+        <title>Contact</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="/style/contactMe.css">
+        <script src=""></script>
+    </head>
+    <body>
+       <%- include partials/main_nav.ejs %>
+    
+        <main>
+                <br><br>
+                <div class="centre">
+                <br><br><br><br>
+                        <br><br><br><br><br>
+
+                        <h2><i> Contact me by filling this form:</i></h2>
+    <p><h4><i><u>Please read each statement and fill each one individually.</u></i></h4></p>
+    <br>
+       </header>
+       <form method="POST" action="mailto:adaabaz@my.centennialcollege.ca">
+               <fieldset id="details">
+                   <legend><h2>Personal information</h2></legend>
+                   <br>
+                   <label for="firstName">First name:</label>
+                   <input type="text" id="firstName" placeholder=" Jack" required>
+                   <p id="firstnameError" class="errorMsg"></p>
+                    
+                   <label for="lastName">Last name:</label>
+                   <input type="text" id="lastName" placeholder="Smith"required>
+                   <p id="lastnameError" class="errorMsg"></p>
+       <br><br>
+                   <label for="email">Email address:</label>
+                   <input type="text" id="emailAddress" placeholder="adaabaz@my.centennialcollege.ca"required>
+                   <p id="emailError" class="errorMsg"></p>
+                   <label for="phone">Phone number:</label>
+                   <input type="tel" id="number" placeholder="(552) 452 6778"required>
+       <br><br>
+                       <label for="area">Service:</label>
+                       <select name="location" id="location">
+                        <option value="Web Application Development"required>Web Application Development</option>
+                        <option value="Software Prototyping"required>Software Prototyping</option>
+                        <option value="Quality Assurance"required>Quality Assurance</option>
+                         <option value=".Net Application Development"required>.Net Application Development</option>
+                      </select>
+                      <br><br>
+                      <hr>
+                      <br><br>
+                        <legend><h2>Any Other Comments</h2></legend>
+                        <br><br>
+                        <label for="inputArea">How can I help you?</label>
+                        <textarea id="inputArea" rows="1" cols="60"placeholder=" Hey, I need a ......" required></textarea><br><br><hr><br><br>
+                        <label for="inputArea">What other areas you would like me to exploder on?</label>
+                        <textarea id="inputArea" rows="1" cols="60"placeholder=" Optional"></textarea><br><br><hr><br><br>
+                        <label for="inputArea">If you have other comments please provide them here:</label>
+                        <textarea id="inputArea" rows="1" cols="60"placeholder=" Optional"></textarea><br><hr><br><br>
+                        </fieldset>
+                        <br><br>
+                        <p><h5><b><i><u>"Thank you for contacting! It is my pleasure to help!"</u></i></b></h5></p>
+                        <br><br>
+                        <input type="submit" value="Submit">
+                        <input type="reset">
+               </fieldset>
+       </form></div>
+<%- include partials/bottom_nav.ejs %>
+<%- include partials/footer.ejs %>
+
+
+
+
