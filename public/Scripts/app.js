@@ -1,14 +1,3 @@
-// IIFE -- Immediately Invoked Function Expression
-(function(){
-
-    function Start()
-    {
-        console.log("App Started...");
-    }
-
-    window.addEventListener("load", Start);
-
-})();
 
 /* validate form */
 function validateForm(evt) {
@@ -127,6 +116,7 @@ if (fNameInput.addEventListener) {
 } else if (fNameInput.attachEvent) {
     fNameInput.attachEvent("onchange", validateFirstname);
     lNameInput.attachEvent("onchange", validateLastname);
+    emailInput.addEventListener("onchange", validateEmail);
     phoneInput.attachEvent("onchange", validatePhoneNumber);
 }
 
