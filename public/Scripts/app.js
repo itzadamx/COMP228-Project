@@ -1,4 +1,26 @@
+(function(){
 
+    function Start()
+    {
+        console.log("App Started...");
+
+        let deleteButtons = document.querySelectorAll('.btn-danger');
+        //for all the danger button in our project 
+        for(button of deleteButtons)
+        {
+            button.addEventListener('click', (event)=>{
+                if(!confirm("Are you sure?")) 
+                {
+                    event.preventDefault();
+                    window.location.assign('/book-list');
+                }
+            });
+        }
+    }
+
+    window.addEventListener("load", Start);
+
+})();
 /* validate form */
 function validateForm(evt) {
     if (evt.preventDefault) {

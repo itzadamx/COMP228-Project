@@ -1,35 +1,24 @@
+
 let express = require('express');
-let mongoose = require('mongoose');
 let router = express.Router();
-let Book = require('../models/book');
+
+let indexController = require('../controllers/index');
 /* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Home'});
-});
+router.get('/', indexController.displayHomePage);
 
 /* GET home page. */
-router.get('/home', function(req, res, next) {
-  res.render('index', { title: 'Home'});
-});
+router.get('/home', indexController.displayHomePage);
 
 /* GET About Us page. */
-router.get('/about', function(req, res, next) {
-  res.render('about', { title: 'About'});
-});
+router.get('/about', indexController.displayAboutPage);
 
-/* GET projects page. */
-router.get('/project', function(req, res, next) {
-  res.render('project', { title: 'project'});
-});
+/* GET Products page. */
+router.get('/project', indexController.displayProductsPage);
 
 /* GET Services page. */
-router.get('/service', function(req, res, next) {
-  res.render('service', { title: 'service'});
-});
+router.get('/service', indexController.displayServicesPage);
 
 /* GET Contact Us page. */
-router.get('/contact', function(req, res, next) {
-  res.render('contact', { title: 'Contact'});
-});
+router.get('/contact', indexController.displayContactPage);
 
 module.exports = router;
