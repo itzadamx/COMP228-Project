@@ -1,6 +1,7 @@
-var express = require('express');
-var router = express.Router();
-
+let express = require('express');
+let mongoose = require('mongoose');
+let router = express.Router();
+let Book = require('../models/book');
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Home'});
