@@ -3,7 +3,7 @@ let router = express.Router();
 let mongoose = require('mongoose');
 
 // connect to our Book Model
-let Book = require('../models/book');
+
 
 let bookController = require('../controllers/book');
 
