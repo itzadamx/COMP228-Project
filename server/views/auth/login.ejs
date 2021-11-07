@@ -1,16 +1,20 @@
 
-
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Home</title>
+        <title>Login</title>
         <meta charset="utf-8">
-        <link rel="stylesheet" href="/style/home.css">
-        <script src=""></script>
+        <link rel="stylesheet" href="/style/service.css">
+        <link rel="stylesheet" href="/bootstrap/dist/css/bootstrap.min.css">
+         <link rel="stylesheet" href="/@fortawesome/fontawesome-free/css/all.min.css">
+        <script src="/Scripts/app.js"></script>
     </head>
     <body>
-       <%- include partials/main_nav.ejs %>
+       <%- include ../partials/main_nav.ejs %>
 <main class="container">
+    <br><br><br><br>
+                        <br><br><br><br><br>
+<div class="centre">
     <!-- Message Area -->
     <% if(messages.length > 0) {%>
         <div class="alert alert-danger">
@@ -48,8 +52,9 @@
             </form>
         </div>
     </div>
+</div>
 
 </main>
-        <br>
-<%- include partials/bottom_nav.ejs %>
-<%- include partials/footer.ejs %>
+<br><br><br>
+<%- include ../partials/bottom_nav.ejs %>
+<%- include ../partials/footer.ejs %>

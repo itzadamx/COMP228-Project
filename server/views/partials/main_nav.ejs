@@ -8,7 +8,12 @@
     
             <div class="header-2">
                 <nav class="centre">
-                        <a  class ="menu"href="/book">Book List</a>
+                                <% if(typeof displayName == 'string' && displayName) { %>
+                               <li class="navbar-text"><i class="fas fa-lg fa-user"></i> Welcome, <%= displayName %></li>
+                               <a class ="menu" href="/logout">Logout</a>
+                              <% } else { %>
+                             <a class ="menu" href="/login">Login</a><% } %>
+                        <a  class ="menu"href="/contact-list">Contact List</a>
                         <a  class ="menu"href="/about">About Me</a>
                         <a  class ="menu"href="/contact">Contact Me</a>
                         <a  class ="menu"href="/project">Projects</a>

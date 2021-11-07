@@ -19,8 +19,7 @@ let mongoose = require('mongoose');
 let DB = require('./db');
 
 // point mongoose to the DB URI
-mongoose.connect(DB.URI);
-//, {useNewUrlParser: true, useUnifiedTopology: true}
+mongoose.connect(DB.URI, {useNewUrlParser: true, useUnifiedTopology: true});
 let mongoDB = mongoose.connection;
 mongoDB.on('error', console.error.bind(console, 'Connection Error:'));
 mongoDB.once('open', ()=>{
@@ -29,7 +28,8 @@ mongoDB.once('open', ()=>{
 
 let indexRouter = require('../routes/index');
 let usersRouter = require('../routes/users');
-let bookRouter = require('../routes/books');
+//let bookRouter = require('../routes/books');
+let contactRouter = require('../routes/contact');
 let app = express();
 
 
@@ -75,7 +75,8 @@ passport.deserializeUser(User.deserializeUser());
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-app.use('/book-list', bookRouter);
+//app.use('/book-list', bookRouter);
+app.use('/contact-list', contactRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
