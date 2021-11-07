@@ -1,5 +1,5 @@
 {
-  "name": "comp229-f2020-assignment1",
+  "name": "comp229-f2020-assignment2",
   "version": "0.0.2",
   "private": true,
   "scripts": {
@@ -39,12 +39,12 @@
   "devDependencies": {},
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/itzadamx/comp229-assignment1-301151527.git"
+    "url": "git+https://github.com/itzadamx/comp229_assignment2_30111527.git"
   },
   "author": "itzadamx",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/itzadamx/comp229-assignment1-301151527.git"
+    "url": "https://github.com/itzadamx/comp229_assignment2_30111527.git"
   },
-  "homepage": "https://github.com/itzadamx/comp229-assignment1-301151527.git"
+  "homepage": "https://github.com/itzadamx/comp229_assignment2_30111527.git"
 }
