@@ -7,24 +7,24 @@ let logger = require('morgan');
 
 
 // modules for authentication
-let session = require('express-session');
-let passport = require('passport');
+//let session = require('express-session');
+//let passport = require('passport');
 
-let passportLocal = require('passport-local');
-let localStrategy = passportLocal.Strategy;
-let flash = require('connect-flash');
+//let passportLocal = require('passport-local');
+//let localStrategy = passportLocal.Strategy;
+//let flash = require('connect-flash');
 
 //Database set up
-let mongoose = require('mongoose');
-let DB = require('./db');
+//let mongoose = require('mongoose');
+//let DB = require('./db');
 
-// point mongoose to the DB URI
+/* point mongoose to the DB URI
 mongoose.connect(DB.URI, {useNewUrlParser: true, useUnifiedTopology: true});
 let mongoDB = mongoose.connection;
 mongoDB.on('error', console.error.bind(console, 'Connection Error:'));
 mongoDB.once('open', ()=>{
   console.log('Connected to MongoDB...');
-});
+});*/
 
 let indexRouter = require('../routes/index');
 let usersRouter = require('../routes/users');
@@ -45,6 +45,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '../../public')));
 app.use(express.static(path.join(__dirname, '../../node_modules')));
 
+/*
 //setup express session
 app.use(session({
   secret: "SomeSecret",
@@ -61,9 +62,6 @@ app.use(passport.session());
 
 // passport user configuration
 
-// create a User Model Instance
-let userModel = require('../models/user');
-let User = userModel.User;
 
 // implement a User Authentication Strategy
 passport.use(User.createStrategy());
@@ -71,12 +69,15 @@ passport.use(User.createStrategy());
 // serialize and deserialize the User info
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
+*/
 
+// create a User Model Instance
+let userModel = require('../models/user');
+let User = userModel.User;
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-//app.use('/book-list', bookRouter);
-app.use('/contact-list', contactRouter);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

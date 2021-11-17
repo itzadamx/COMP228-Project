@@ -15,22 +15,7 @@ module.exports.displayHomePage = (req, res, next) => {
     res.render('index', {title: 'Home',displayName:req.user ? req.user.displayName : ''});
 }
 
-module.exports.displayAboutPage = (req, res, next) => {
-    res.render('about', { title: 'About',displayName:req.user ? req.user.displayName : ''});
-}
-
-module.exports.displayProductsPage = (req, res, next) => {
-    res.render('project', { title: 'project',displayName:req.user ? req.user.displayName : ''});
-}
-
-module.exports.displayServicesPage = (req, res, next) => {
-    res.render('service', { title: 'service',displayName:req.user ? req.user.displayName : ''});
-}
-
-module.exports.displayContactPage = (req, res, next) => {
-    res.render('contact', { title: 'contact',displayName:req.user ? req.user.displayName : ''});
-}
-
+/*
 module.exports.displayLoginPage = (req, res, next) => {
     // check if the user is already logged in
     if(!req.user)
@@ -145,4 +130,4 @@ module.exports.processRegisterPage = (req, res, next) => {
 module.exports.performLogout = (req, res, next) => {
     req.logout();
     res.redirect('/');
-}
+}*/

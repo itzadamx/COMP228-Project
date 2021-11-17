@@ -14,7 +14,6 @@
     margin: 0;
     font-family: 'avenir next', helvetica, arial, sans-serif;
 }
-
 /*Basic fonts and sizes for H1 H2 H3*/
 h1{
     color:rgba(var(--black));
@@ -91,7 +90,6 @@ label, p {
 .no-decoration {
     list-style-type: none;
 }
-
 /*basic nav heading (font-size-color)*/
 li {
     display: inline;
@@ -129,12 +127,12 @@ li {
 .header-logo {
     height: 100px;
     width: 200px;
-    background-image: url(../img/logo5.png);
+    background-image: url();
     background-repeat: no-repeat;
     background-color: rgba(var(--white), 0.9);
     z-index: 15;
     position: fixed;
-    margin-left: 150px;
+    margin-left: 130px;
 }
 nav a{
     color: rgb(var(--black));
@@ -163,10 +161,14 @@ nav a:hover {
     margin-top: -100px;
     z-index: -1;
 }
+
+
+
 .text-block {
     margin-top: calc(85vh - 100px);
 }
-/* Form style*/
+
+/* form style*/
 input[type=text], input[type=email], input[type=date], select {
     height: var(--xlarge-font);
     margin: 10px;
@@ -175,6 +177,16 @@ input[type=text], input[type=email], input[type=date], select {
     border-color:rgb(var(--grey));
     color: rgb(var(--dkgrey));
     font-size: var(--small-font);
+}
+
+
+
+.flex-25 {
+    width: 25%;
+}
+
+.flex-50 {
+    width: 50%;
 }
 
 textarea {
@@ -272,6 +284,19 @@ footer{
 hr{
     border-color:rgb(var(--gold));border-width:3px;
   }
+  #house2, #house3, #house1{
+    float: right;
+    padding: 20px 20px 20px 20px;
+  }
+  #house1text{
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  #house3, #house1{
+      margin-top: -50px;
+  }
 
   p{
     padding-left: 15px;
@@ -285,7 +310,6 @@ font-weight: 400;
     border-radius: 10px;
     text-align: center;
     }
-
  main   { 
 	grid-row: 2 / 3; 
 	grid-column: 2 / 3;
@@ -298,6 +322,35 @@ font-weight: 400;
     display: inline;
     margin-right: 5%;
 }
+
   h6{
       padding-top: 60px;
   }
+  /* error style for form*/
+  #errorText {
+    display: none;
+    text-align: center;
+    padding: 10px;
+    margin: 0 auto;
+    font-size: 20px;
+    margin-bottom:0px;
+    margin: 55px 15px 0;
+    background: rgb(124,124,136);
+    color: white;
+    border: 2px solid rgb(190,50,38);
+}
+div.errorMessage {
+    position: relative;
+    top: 70px;
+    color:red;
+    bottom: 20px;
+    font-size: 20px;
+    line-height: 1.2em;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+p.errorMsg {
+    display: none;
+    color: red;
+    font-size: 15px;
+}

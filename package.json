@@ -34,17 +34,17 @@
     "passport-local-mongoose": "^6.1.0",
     "popper.js": "^1.16.1"
   },
-  "description": "app for assignment 1",
+  "description": "app for Project",
   "main": "index.js",
   "devDependencies": {},
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/itzadamx/comp229_assignment2_30111527.git"
+    "url": "git+https://github.com/itzadamx/COMP228-Project.git"
   },
   "author": "itzadamx",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/itzadamx/comp229_assignment2_30111527.git"
+    "url": "https://github.com/itzadamx/COMP228-Project.git"
   },
-  "homepage": "https://github.com/itzadamx/comp229_assignment2_30111527.git"
+  "homepage": "https://github.com/itzadamx/COMP228-Project.git"
 }

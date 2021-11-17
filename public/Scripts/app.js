@@ -12,7 +12,7 @@
                 if(!confirm("Are you sure?")) 
                 {
                     event.preventDefault();
-                    window.location.assign('/book-list');
+                    window.location.assign('');
                 }
             });
         }
@@ -21,6 +21,8 @@
     window.addEventListener("load", Start);
 
 })();
+
+/* I left my code here for you to edit it for login stuff (/Adam)
 /* validate form */
 function validateForm(evt) {
     if (evt.preventDefault) {

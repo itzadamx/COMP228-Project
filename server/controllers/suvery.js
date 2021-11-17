@@ -2,7 +2,49 @@ let express = require('express');
 let router = express.Router();
 let mongoose = require('mongoose');
 
-// create a reference to the model
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* This the old contact code feel free to reuse it but in the right way / Pink */
+/* create a reference to the model
 let contact = require('../models/contact');
 
 module.exports.displaycontactList = (req, res, next) => {
@@ -103,4 +145,4 @@ module.exports.performDelete = (req, res, next) => {
              res.redirect('/contact-list');
         }
     });
-}
+}*/
