@@ -28,7 +28,6 @@ mongoDB.once('open', ()=>{
 
 let indexRouter = require('../routes/index');
 let usersRouter = require('../routes/users');
-//let bookRouter = require('../routes/books');
 let surveyRouter = require('../routes/survey'); // changed contact to survey for routing
 let app = express();
 
@@ -77,6 +76,7 @@ let User = userModel.User;
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+app.use('/survey-list', surveyRouter);
 
 
 // catch 404 and forward to error handler

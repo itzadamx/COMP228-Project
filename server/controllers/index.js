@@ -17,7 +17,7 @@ module.exports.displayHomePage = (req, res, next) => {
 
 // added Credits page - pinkherwin
 module.exports.displayCreditsPage = (req, res, next) => {
-    res.render('credits', {title: 'Credits',displayName:req.user ? req.user.displayName : ''});
+    res.render('credits', {title: 'Credits', displayName:req.user ? req.user.displayName : ''});
 }
 /* END of INSERTED NEW CODE - pinkherwin */
 
