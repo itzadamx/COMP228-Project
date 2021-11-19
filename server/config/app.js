@@ -76,7 +76,7 @@ let User = userModel.User;
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-app.use('/survey-list', surveyRouter);
+app.use('/survey-list', surveysRouter); // added pinkherwin
 
 
 // catch 404 and forward to error handler

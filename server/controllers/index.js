@@ -12,7 +12,7 @@ let userModel = require('../models/user');
 let User = userModel.User; // alias
 
 module.exports.displayHomePage = (req, res, next) => {
-    res.render('index', {title: 'Home',displayName:req.user ? req.user.displayName : ''});
+    res.render('home', {title: 'Home',displayName:req.user ? req.user.displayName : ''});
 }
 
 // added Credits page - pinkherwin
