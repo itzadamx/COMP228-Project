@@ -21,7 +21,7 @@ module.exports.displayCreditsPage = (req, res, next) => {
 }
 /* END of INSERTED NEW CODE - pinkherwin */
 
-/*
+/* Authentication */
 module.exports.displayLoginPage = (req, res, next) => {
     // check if the user is already logged in
     if(!req.user)
@@ -69,7 +69,7 @@ module.exports.processLoginPage = (req, res, next) => {
             }
 
 
-            return res.redirect('/contact-list');
+            return res.redirect('/survey-list');
         });
     })(req, res, next);
 }
@@ -127,7 +127,7 @@ module.exports.processRegisterPage = (req, res, next) => {
           
 
             return passport.authenticate('local')(req, res, () => {
-                res.redirect('/contact-list')
+                res.redirect('/survey-list')
             });
         }
     });
@@ -136,4 +136,4 @@ module.exports.processRegisterPage = (req, res, next) => {
 module.exports.performLogout = (req, res, next) => {
     req.logout();
     res.redirect('/');
-}*/
+}

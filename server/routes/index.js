@@ -13,9 +13,6 @@ router.get('/home', indexController.displayHomePage);
 /* INSERTED NEW CODE - pinkherwin */
 /* GET Route for displaying credits page */
 router.get('/credits', indexController.displayCreditsPage);
-
-
-
 /* END of INSERTED NEW CODE - pinkherwin */
 
 /* GET Route for displaying the Login page */
