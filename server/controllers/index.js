@@ -15,6 +15,12 @@ module.exports.displayHomePage = (req, res, next) => {
     res.render('index', {title: 'Home',displayName:req.user ? req.user.displayName : ''});
 }
 
+// added Credits page - pinkherwin
+module.exports.displayCreditsPage = (req, res, next) => {
+    res.render('credits', {title: 'Credits',displayName:req.user ? req.user.displayName : ''});
+}
+/* END of INSERTED NEW CODE - pinkherwin */
+
 /*
 module.exports.displayLoginPage = (req, res, next) => {
     // check if the user is already logged in

@@ -29,7 +29,7 @@ mongoDB.once('open', ()=>{
 let indexRouter = require('../routes/index');
 let usersRouter = require('../routes/users');
 //let bookRouter = require('../routes/books');
-let contactRouter = require('../routes/contact');
+let surveyRouter = require('../routes/survey'); // changed contact to survey for routing
 let app = express();
 
 
