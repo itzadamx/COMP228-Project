@@ -12,10 +12,16 @@ let userModel = require('../models/user');
 let User = userModel.User; // alias
 
 module.exports.displayHomePage = (req, res, next) => {
-    res.render('index', {title: 'Home',displayName:req.user ? req.user.displayName : ''});
+    res.render('home', {title: 'Home',displayName:req.user ? req.user.displayName : ''});
 }
 
-/*
+// added Credits page - pinkherwin
+module.exports.displayCreditsPage = (req, res, next) => {
+    res.render('credits', {title: 'Credits', displayName:req.user ? req.user.displayName : ''});
+}
+/* END of INSERTED NEW CODE - pinkherwin */
+
+/* Authentication */
 module.exports.displayLoginPage = (req, res, next) => {
     // check if the user is already logged in
     if(!req.user)
@@ -63,7 +69,7 @@ module.exports.processLoginPage = (req, res, next) => {
             }
 
 
-            return res.redirect('/contact-list');
+            return res.redirect('/survey-list');
         });
     })(req, res, next);
 }
@@ -121,7 +127,7 @@ module.exports.processRegisterPage = (req, res, next) => {
           
 
             return passport.authenticate('local')(req, res, () => {
-                res.redirect('/contact-list')
+                res.redirect('/survey-list')
             });
         }
     });
@@ -130,4 +136,4 @@ module.exports.processRegisterPage = (req, res, next) => {
 module.exports.performLogout = (req, res, next) => {
     req.logout();
     res.redirect('/');
-}*/
+}
