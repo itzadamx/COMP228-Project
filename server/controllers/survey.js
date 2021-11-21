@@ -17,8 +17,8 @@ module.exports.displaySurveyList = (req, res, next) => {
             //console.log(SurveyList);
 
             res.render('survey/list', 
-            {title: 'List of Surveys', SurveyList: surveyList,  
-            displayName: req.user ? req.user.displayName : ''});      
+            {title: 'List of Surveys', surveyList: surveyList/*,  
+        displayName: req.user ? req.user.displayName : ''*/});      
         }
     })
         // To arrange in alphabetical order
@@ -26,14 +26,15 @@ module.exports.displaySurveyList = (req, res, next) => {
 }
 
 module.exports.displayAddPage = (req, res, next) => {
-    res.render('survey/add', {title: 'Create a survey', displayName: req.user ? req.user.displayName : ''})          
+    res.render('survey/add', {title: 'Create a survey'/*,  
+displayName: req.user ? req.user.displayName : ''*/})          
 }
 
 module.exports.processAddPage = (req, res, next) => {
     let newSurvey = Survey({
-        "name": req.body.name,
-        "number": req.body.number,
-        "email": req.body.email
+        "title": req.body.title,
+        "questions": req.body.questions,
+        "answer": req.body.answer
     });
 
     Survey.create(newSurvey, (err, Survey) =>{
@@ -63,7 +64,8 @@ module.exports.displayEditPage = (req, res, next) => {
         else
         {
             //show the edit view
-            res.render('survey/edit', {title: 'Edit survey', survey: surveyToEdit, displayName: req.user ? req.user.displayName : ''})
+            res.render('survey/edit', {title: 'Edit survey', survey: surveyToEdit/*,  
+        displayName: req.user ? req.user.displayName : ''*/})
         }
     });
 }
@@ -73,9 +75,9 @@ module.exports.processEditPage = (req, res, next) => {
 
     let updatedSurvey = Survey({
         "_id": id,
-        "name": req.body.name,
-        "number": req.body.number,
-        "email": req.body.email
+        "title": req.body.title,
+        "questions": req.body.questions,
+        "answer": req.body.answer
     });
 
     Survey.updateOne({_id: id}, updatedSurvey, (err) => {

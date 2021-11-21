@@ -14,59 +14,28 @@
                     id="nameTextField"
                     placeholder="Enter the Survey Title"
                     name="name" 
-                    value="<%= survey.name %>"
+                    value="<%= survey.title %>"
                     required>
                 </div>
 
                 <div class="form-group">
-                    <label for="authorTextField">Option A</label>
+                    <label for="authorTextField">questions</label>
                     <input type="text" class="form-control"
                     id="optionATextField"
-                    placeholder="Enter the Option A"
+                    placeholder="Enter the questions"
                     name="optionA" 
-                    value="<%= survey.optionATextField %>"
+                    value="<%= survey.questions %>"
                     required>
                 </div>
 
                 <div class="form-group">
-                    <label for="authorTextField">Option B</label>
+                    <label for="authorTextField">answer</label>
                     <input type="text" class="form-control"
                     id="optionBTextField"
-                    placeholder="Enter the Option B"
+                    placeholder="Enter the answer"
                     name="optionB" 
-                    value="<%= survey.optionBTextField %>"
+                    value="<%= survey.answer %>"
                     required>
-                </div>
-
-                <div class="form-group">
-                    <label for="authorTextField">Option C</label>
-                    <input type="text" class="form-control"
-                    id="optionCTextField"
-                    placeholder="Enter the Option C"
-                    name="optionC" 
-                    value="<%= survey.optionCTextField %>"
-                    required>
-                </div>
-
-                <div class="form-group">
-                    <label for="authorTextField">Option D</label>
-                    <input type="text" class="form-control"
-                    id="optionDTextField"
-                    placeholder="Enter the Option D"
-                    name="optionD" 
-                    value="<%= survey.optionDTextField %>"
-                    required>
-                </div>
-
-                <div class="form-group">
-                    <label for="descriptionTextArea">Description</label>
-                    <textarea type="text" class="form-control"
-                    id="descriptionTextArea"
-                    placeholder="Enter the a brief description of the book"
-                    name="description" 
-                    required>
-                    <%= survey.description %>
-                    </textarea>
                 </div>
 
                 <button class="btn btn-primary" type="submit">
