@@ -1,20 +1,11 @@
-<!DOCTYPE html>
-<html>
-    <head>
-    </head>
-    <body>
-       <%- include partials/main_nav.ejs %>
-       <div class="centre">
-                <br><br><br><br>    <br><br><br><br><hr>
-  <!-- Main Content -->
+<%- include partials/header.ejs %>
+
 
 <div class="container">
     <h1><%= message %></h1>
     <h2><%= error.status %></h2>
     <pre><%= error.stack %></pre>
 </div>
-</div>
 
-<%- include partials/bottom_nav.ejs %>
 
 <%- include partials/footer.ejs %>
