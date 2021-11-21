@@ -22,7 +22,7 @@ module.exports.displaySurveyList = (req, res, next) => {
         }
     })
         // To arrange in alphabetical order
-        .sort({"name":1});
+        //.sort({"name":1});
 }
 
 module.exports.displayAddPage = (req, res, next) => {
