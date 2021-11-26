@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@angular/cli": "^13.0.3",
-    "@fortawesome/fontawesome-free": "^5.14.0",
+    "@fortawesome/fontawesome-free": "^5.15.4",
     "@types/connect-flash": "0.0.37",
     "@types/express": "^4.17.13",
     "@types/express-session": "^1.17.4",
@@ -27,7 +27,7 @@
     "express": "^4.16.4",
     "express-session": "^1.17.2",
     "http-errors": "~1.6.3",
-    "jquery": "^3.5.1",
+    "jquery": "^3.6.0",
     "mongoose": "^6.0.12",
     "morgan": "~1.9.1",
     "passport": "^0.5.0",
@@ -46,5 +46,9 @@
   "bugs": {
     "url": "https://github.com/itzadamx/COMP228-Project.git"
   },
-  "homepage": "https://github.com/itzadamx/COMP228-Project.git"
+  "homepage": "https://github.com/itzadamx/COMP228-Project.git",
+  "devDependencies": {
+    "@types/bootstrap": "^5.1.6",
+    "@types/jquery": "^3.5.9"
+  }
 }
