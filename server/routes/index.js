@@ -11,6 +11,10 @@ router.get('/', indexController.displayHomePage);
 router.get('/home', indexController.displayHomePage);
 
 /* INSERTED NEW CODE - pinkherwin */
+
+router.get('/contact', indexController.displayContactPage);
+
+router.get('/survey', indexController.displayDoSurveyPage)
 /* GET Route for displaying credits page */
 router.get('/credits', indexController.displayCreditsPage);
 /* END of INSERTED NEW CODE - pinkherwin */

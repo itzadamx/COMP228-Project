@@ -7,17 +7,16 @@
         <div class="offset-md-1 col-md-11">
             <h1><%= title %></h1>
             <a href="/survey-list/add" class="btn btn-primary" role="button">
-            <i class="fas fa-plus-circle"></i> Add a Survey</a>
+            <i class="fas fa-plus-circle"></i> Add Question</a>
+            <br>
             <br>
             <table class="table table-bordered table-striped table-hover">
                 <!-- Header Row-->
                 <tr class="d-flex">
                     <th class="text-center col-2">Title</th>
-                    <th class="col-4">Question</th>
-                    <th class="text-center col-2">Answer</th>
-                    <!--
-                    <th class="text-center col-4">Survey</th>
-                    <th class="col-8">Description</th>-->
+                    <th class="text-center col-4">Description</th>
+                    <th class="text-center col-2">Type</th>
+                    <th class="text-center col-4">Options</th>
                 </tr>
 
                 <!-- Repeatable Template Row -->
@@ -25,13 +24,13 @@
                 <% for(let count = 0; count < surveyList.length; count++) { %>
                     <tr class="d-flex">
                         <td class="text-center col-2"><%= surveyList[count].title %></td>
-                        <td class="col-4"><%= surveyList[count].questions %></td>
-                        <td class="text-center col-2"><%= surveyList[count].answer %></td>
-                        <td class="text-center col-1">
+                        <td class="col-4"><%= surveyList[count].description %></td>
+                        <td class="text-center col-2"><%= surveyList[count].type %></td>
+                        <td class="text-center col-2">
                             <a href="/survey-list/edit/<%= surveyList[count]._id %>" class="btn btn-primary btn-sm">
-                            <i class="fas fa-pencil-alt"></i> update</a>
+                            <i class="fas fa-pencil-alt"></i>Edit</a>
                         </td>
-                        <td class="text-center col-1">
+                        <td class="text-center col-2">
                             <a href="/survey-list/delete/<%= surveyList[count]._id %>" class="btn btn-danger btn-sm">
                             <i class="fas fa-trash-alt"></i> Delete</a>
                         </td>
@@ -44,9 +43,3 @@
   
 
 <%- include ../partials/footer.ejs %>
-  
-
-
-
-
-

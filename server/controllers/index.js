@@ -21,6 +21,14 @@ module.exports.displayCreditsPage = (req, res, next) => {
 }
 /* END of INSERTED NEW CODE - pinkherwin */
 
+module.exports.displayContactPage = (req, res, next) => {
+    res.render('contact', {title: 'contact',displayName:req.user ? req.user.displayName : ''});
+}
+
+module.exports.displayDoSurveyPage = (req, res, next) => {
+    res.render('survey', {title: 'survey',displayName:req.user ? req.user.displayName : ''});
+}
+
 /* Authentication */
 module.exports.displayLoginPage = (req, res, next) => {
     // check if the user is already logged in
