@@ -56,6 +56,7 @@ app.use(flash());
 app.use(passport.initialize());
 app.use(passport.session());
 
+/* // PLEASE ACTIVATE ONCE AUTHENTICATION PART IS READY
 // create a User Model Instance
 let userModel = require('../models/user');
 let User = userModel.User;
@@ -66,6 +67,8 @@ passport.use(User.createStrategy());
 // serialize and deserialize the User info
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
+// UP TO THIS POINT*/
+
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
