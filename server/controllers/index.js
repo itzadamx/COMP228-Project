@@ -3,7 +3,7 @@ let router = express.Router();
 let mongoose = require('mongoose');
 let passport = require('passport');
 
-
+let jwt = require('jsonwebtoken');
 let DB = require('../config/db');
 
 // create the User Model instance
@@ -64,9 +64,9 @@ module.exports.processLoginPage = (req, res, next) => {
                     email: user.email
                 }
 
-                const authToken = jwt.sign(payload, DB.Secret, {
+               /* const authToken = jwt.sign(payload, DB.Secret, {
                     expiresIn: 604800 
-                });
+                });*/
 
                
                 return res.redirect('/survey-list');
@@ -94,7 +94,7 @@ module.exports.processRegisterPage = (req, res, next) => {
     // instantiate a user object
     let newUser = new User({
         username: req.body.username,
-        //password: req.body.password,
+        password: req.body.password,
         email: req.body.email,
         displayName: req.body.displayName
     });
