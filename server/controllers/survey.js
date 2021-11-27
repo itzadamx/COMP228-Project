@@ -17,17 +17,17 @@ module.exports.displaySurveyList = (req, res, next) => {
             //console.log(SurveyList);
 
             res.render('survey/list', 
-            {title: 'List of Surveys', surveyList: surveyList/*,  
-        displayName: req.user ? req.user.displayName : ''*/});      
+            {title: 'List of Surveys', surveyList: surveyList,  
+        displayName: req.user ? req.user.displayName : ''});      
         }
-    })
+    });
         // To arrange in alphabetical order
         //.sort({"name":1});
 }
 
 module.exports.displayAddPage = (req, res, next) => {
-    res.render('survey/add', {title: 'Create a survey'/*,  
-displayName: req.user ? req.user.displayName : ''*/})          
+    res.render('survey/add', {title: 'Create a survey',  
+displayName: req.user ? req.user.displayName : ''})          
 }
 
 module.exports.processAddPage = (req, res, next) => {
@@ -64,8 +64,8 @@ module.exports.displayEditPage = (req, res, next) => {
         else
         {
             //show the edit view
-            res.render('survey/edit', {title: 'Edit survey', survey: surveyToEdit/*,  
-        displayName: req.user ? req.user.displayName : ''*/})
+            res.render('survey/edit', {title: 'Edit survey', survey: surveyToEdit,  
+        displayName: req.user ? req.user.displayName : ''})
         }
     });
 }
@@ -110,5 +110,3 @@ module.exports.performDelete = (req, res, next) => {
         }
     });
 }
-
-/* END of INSERTED CODE - pinkherwin */
