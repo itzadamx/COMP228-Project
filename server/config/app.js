@@ -73,7 +73,8 @@ passport.use(User.createStrategy());
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-app.use('/survey-list', surveyRouter); // added pinkherwin
+app.use('/survey-list', surveyRouter); 
+app.use('/survey', surveyRouter); // ADDED
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
