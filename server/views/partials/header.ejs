@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <a class="navbar-brand" href="/">JAM</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -9,22 +9,39 @@
 
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
+    <ul class="navbar-nav ml-auto">
+      <% if (title == "Home"){ %>
+        <li class="nav-item active">
+        <% } else  { %>
+        <li class="nav-item">
+        <% } %>
+          <a class="nav-link" href="/home"><i class="fas fa-igloo"></i> Home </a>
+        </li>
+
+      <% if (title =="Survey") { %> }
       <li class="nav-item active">
-        <a class="nav-link" href="/home">Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/survey">Take Survey</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/credits">Our Team</a>
-      </li>
+        <% } else {%> 
+          <li class="nav-item ">
+            <% } %>
+            <a class="nav-link" href="/survey"><i class="fas fa-poll"></i> Survey </a>
+          </li>
+        
+        
+          <% if (title =="Credits") { %> }
+          <li class="nav-item active">
+            <% } else {%> 
+              <li class="nav-item ">
+                <% } %>
+                <a class="nav-link" href="/credits"><i class="fad fa-users-crown"></i> Credits </a>
+              </li>
 
-      <li class="nav-item">
-        <a class="nav-link" href="/survey-list">Edit Survey</a>
-      </li>
-
-
+              <% if (title =="Edit Survey") { %> }
+              <li class="nav-item active">
+                <% } else {%> 
+                  <li class="nav-item ">
+                    <% } %>
+                    <a class="nav-link" href="/survey-list"><i class="fas fa-list-alt"></i> Edit Survey </a>
+                  </li>
     </ul>
 
   </div>
