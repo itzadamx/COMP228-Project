@@ -36,4 +36,7 @@ router.get('/delete/:id', requireAuth, surveyController.performDelete);
 
 /* For survey.ejs view */
 
+/* GET Route for the survey Answer page - READ Operation */
+router.get('/survey', surveyController.displaySurveyAnswer);
+
 module.exports = router;
