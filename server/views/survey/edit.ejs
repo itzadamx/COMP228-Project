@@ -38,6 +38,38 @@
                     required>
                 </div>
 
+                <button class="btn btn-primary" type="button">Add more!</button>
+                 <table id="question">
+
+                <head>
+                    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+                    </head>
+                    <body>
+                
+                
+             
+                
+                 </table>
+                
+                  <script>
+                
+                     $(document).ready(function(){
+                
+                       $("button").on("click", function(){
+                
+                         var row = '<tr> <td><input type = "text" class = "form-control"  value="<%= survey.questions %>" placeholder="Enter the question" required></input></td> </tr>';
+                
+                         $("#question").append(row);
+                
+                       });
+                
+                     });
+                
+                    </script>
+                
+                    </body>
+
+
                 <button class="btn btn-primary" type="submit">
                     <i class="fas fa-edit"></i> Submit</button>
                 
