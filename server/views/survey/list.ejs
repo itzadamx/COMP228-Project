@@ -6,8 +6,10 @@
     <div class="row">
         <div class="offset-md-1 col-md-11">
             <h1><%= title %></h1>
+            <% if(typeof displayName == 'string' && displayName) { %>
             <a href="/survey-list/add" class="btn btn-primary" role="button">
             <i class="fas fa-plus-circle"></i> Add Question</a>
+            <% } %>
             <br>
             <br>
             <table class="table table-bordered table-striped table-hover">
@@ -21,21 +23,42 @@
 
                 <!-- Repeatable Template Row -->
 
+
+                <% if(typeof displayName == 'string' && displayName) { %>
                 <% for(let count = 0; count < surveyList.length; count++) { %>
                     <tr class="d-flex">
                         <td class="text-center col-2"><%= surveyList[count].title %></td>
                         <td class="col-4"><%= surveyList[count].description %></td>
                         <td class="text-center col-2"><%= surveyList[count].type %></td>
+
+
                         <td class="text-center col-2">
                             <a href="/survey-list/edit/<%= surveyList[count]._id %>" class="btn btn-primary btn-sm">
                             <i class="fas fa-pencil-alt"></i>Edit</a>
                         </td>
+                        
                         <td class="text-center col-2">
                             <a href="/survey-list/delete/<%= surveyList[count]._id %>" class="btn btn-danger btn-sm">
                             <i class="fas fa-trash-alt"></i> Delete</a>
+                
                         </td>
                     </tr>
+                    <% } %>
+           
+                <% } else { %>
+
+
+                <% for(let count = 0; count < surveyList.length; count++) { %>
+                    <tr class="d-flex">
+                        <td class="text-center col-2"><%= surveyList[count].title %></td>
+                        <td class="col-4"><%= surveyList[count].description %></td>
+                        <td class="text-center col-2"><%= surveyList[count].type %></td>
+                    </tr>
                 <% } %>
+             
+                <% } %>
+
+
             </table>
         </div>
     </div>
