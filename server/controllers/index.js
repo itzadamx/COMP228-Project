@@ -14,12 +14,12 @@ module.exports.displayHomePage = (req, res, next) => {
     res.render('home', {title: 'Home',displayName:req.user ? req.user.displayName : ''});
 }
 
-// added Credits page - pinkherwin
+// added Credits page 
 module.exports.displayCreditsPage = (req, res, next) => {
     res.render('credits', {title: 'Credits', displayName:req.user ? req.user.displayName : ''});
 }
 
-// added Contacts page - pinkherwin
+// added Contacts page 
 module.exports.displayContactPage = (req, res, next) => {
     res.render('contact', {title: 'Contacts', displayName:req.user ? req.user.displayName : ''});
 }

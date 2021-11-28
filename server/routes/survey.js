@@ -35,8 +35,9 @@ router.post('/edit/:id',requireAuth, surveyController.processEditPage);
 router.get('/delete/:id', requireAuth, surveyController.performDelete);
 
 /* For survey.ejs view */
+
 /* GET Route for the survey Answer page - READ Operation */
-router.get('/', surveyController.displaySurveyAnswer);
+router.get('/survey', surveyController.displaySurveyAnswer);
 
 /* GET Route for displaying the Add page - CREATE Operation */
 router.get('/add', requireAuth, surveyController.displayAddAnswer);
