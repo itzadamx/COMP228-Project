@@ -56,12 +56,14 @@ app.use(flash());
 app.use(passport.initialize());
 app.use(passport.session());
 
+/* // PLEASE ACTIVATE ONCE AUTHENTICATION PART IS READY
 // create a User Model Instance
 let userModel = require('../models/user');
 let User = userModel.User;
 
 // implement a User Authentication Strategy
 passport.use(User.createStrategy());
+
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
