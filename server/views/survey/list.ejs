@@ -14,12 +14,24 @@
             <br>
             <table class="table table-bordered table-striped table-hover">
                 <!-- Header Row-->
+
+                
+                <% if(typeof displayName == 'string' && displayName) { %>
+
                 <tr class="d-flex">
                     <th class="text-center col-2">Title</th>
                     <th class="text-center col-4">Description</th>
                     <th class="text-center col-2">Type</th>
                     <th class="text-center col-4">Options</th>
                 </tr>
+                <% } else { %>
+
+                <tr class="d-flex">
+                    <th class="text-center col-2">Title</th>
+                    <th class="text-center col-4">Description</th>
+                    <th class="text-center col-6">Type</th>
+                </tr>
+                <% } %>
 
                 <!-- Repeatable Template Row -->
 
@@ -52,7 +64,7 @@
                     <tr class="d-flex">
                         <td class="text-center col-2"><%= surveyList[count].title %></td>
                         <td class="col-4"><%= surveyList[count].description %></td>
-                        <td class="text-center col-2"><%= surveyList[count].type %></td>
+                        <td class="text-center col-6"><%= surveyList[count].type %></td>
                     </tr>
                 <% } %>
              
