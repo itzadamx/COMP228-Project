@@ -20,10 +20,11 @@
 
       <% if (title =="Survey") { %> }
       <li class="nav-item active">
+
         <% } else {%> 
           <li class="nav-item ">
             <% } %>
-            <a class="nav-link" href="/survey"><i class="fas fa-poll"></i> Survey </a>
+            <a class="nav-link" href="/survey"><i class="fas fa-poll"></i>Take Survey </a>
           </li>
         
         
@@ -42,6 +43,16 @@
                     <% } %>
                     <a class="nav-link" href="/survey-list"><i class="fas fa-list-alt"></i> Edit Survey </a>
                   </li>
+                  
+         <% if(typeof displayName == 'string' && displayName) { %>
+        <li class="navbar-text"><i class="fas fa-lg fa-user"></i> <b>Welcome, <%= displayName %></b></li>
+        <li class="nav-item"><a href="/logout" class="nav-link">
+          <i class="fas fa-lg fa-sign-out-alt"></i> Logout</a></li>
+      <% } else { %>
+        <li class="nav-item"><a href="/login" class="nav-link">
+          <i class="fas fa-lg fa-sign-in-alt"></i> Login</a></li>
+      <% } %>
+
     </ul>
 
   </div>

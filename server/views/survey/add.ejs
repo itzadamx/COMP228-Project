@@ -6,35 +6,48 @@
         <div class="offset-md-3 col-md-6">
             <h1><%= title %></h1>
 
-            <form class="form" method="POST">
-                <div class="form-group">
-                    <label for="nameTextField"> Title</label>
+                         <div class="form-group">
+                    <label for="nameTextField">Survey Title</label>
                     <input type="text" class="form-control"
                     id="nameTextField"
-                    placeholder="Enter the Title"
-                    name="title" required>
+                    placeholder="Enter the Survey Title"
+                    name="name" 
+                    value=" survey.title"
+                    required>
                 </div>
 
                 <div class="form-group">
-                    <label for="authorTextField">questions</label>
+                    <label for="descriptionTextField">Description</label>
                     <input type="text" class="form-control"
-                    id="authorTextField"
-                    placeholder="Enter the question"
-                    name="questions" required>
+                    id="descriptionTextField"
+                    placeholder="Enter the Description"
+                    name="description" 
+                    value="survey.description"
+                    required>
                 </div>
 
                 <div class="form-group">
-                    <label for="publishedTextField">answer</label>
+
+                    <label for="typeTextField">Type</label>
+
                     <input type="text" class="form-control"
-                    id="publishedTextField"
-                    placeholder="Enter the answer"
-                    name="answer" required>
+                    id="typeTextField"
+                    placeholder="Enter the type of survey"
+                    name="Type" 
+                    value="survey.type"
+                    required>
                 </div>
+
+                <button class="btn btn-primary" type="button">Add more!</button>
+                 <table id="question">
+
+                
+
 
                 <button class="btn btn-primary" type="submit">
                     <i class="fas fa-edit"></i> Submit</button>
                 
-                    <a href="/survey-list" class="btn btn-warning">
+                    <a href="/Home" class="btn btn-warning">
                         <i class="fas fa-undo"></i> Cancel</a>
 
             </form>

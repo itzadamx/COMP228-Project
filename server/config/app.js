@@ -62,7 +62,7 @@ app.use(flash());
 app.use(passport.initialize());
 app.use(passport.session());
 
-/* // PLEASE ACTIVATE ONCE AUTHENTICATION PART IS READY
+/// PLEASE ACTIVATE ONCE AUTHENTICATION PART IS READY
 // create a User Model Instance
 let userModel = require('../models/user');
 let User = userModel.User;
@@ -70,21 +70,23 @@ let User = userModel.User;
 // implement a User Authentication Strategy
 passport.use(User.createStrategy());
 
-// serialize and deserialize the User info
-passport.serializeUser(User.serializeUser());
-passport.deserializeUser(User.deserializeUser());
-// UP TO THIS POINT*/
-
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/survey-list', surveyRouter); // added pinkherwin
 
-
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
 });
+
+
+
+// serialize and deserialize the User info
+passport.serializeUser(User.serializeUser());
+passport.deserializeUser(User.deserializeUser());
+
+
 
 // error handler
 app.use(function(err, req, res, next) {
