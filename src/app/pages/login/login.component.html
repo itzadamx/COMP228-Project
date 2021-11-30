@@ -1,0 +1,21 @@
+s<div class="body-wrapper">
+<h1>Sign In</h1>
+<h4 *ngIf="error">{{error}}</h4>
+<div class="registration_form form_border">
+<form (ngSubmit)="submit()">
+    <label for="username">Username</label>
+    <input id="username" type="text" name="username" class="form-control" [(ngModel)]="username" />
+
+    <div class="survey_label">
+    <label for="password">Password</label>
+    </div>
+    <input id="password" type="password" name="password" class="form-control" [(ngModel)]="password" />
+    
+    <br>
+    <div>
+        <button class="survey_button" type="submit">Login</button>
+    </div>
+</form>
+</div>
+</div>
+
