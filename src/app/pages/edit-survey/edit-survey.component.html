@@ -1,0 +1,29 @@
+<div class="body-wrapper">
+  <div class="center_form form_border">
+    <form #form="ngForm" (ngSubmit)="onSubmit(form)">
+        <label for="titleLable">Title</label>
+        <input required type="text" class="form-control" id="title" name="title" [ngModel]="survey.title">
+        <label for="descriptionLable">Description</label>
+        <input required type="text" class="form-control" id="description" name="description" [ngModel]="survey.description">
+        
+        <div class="question_label">
+        <label for="questions">Questions</label>
+        </div>
+        <div *ngFor='let question of survey.questions; index as i' class="form-group"> 
+            <label for="labelLable_{{i}}">Label of The Question:</label>
+            <input required type="text" class="form-control" id="label_{{i}}" name="label_{{i}}" [ngModel]="question.label">
+            <label for="styleLable_{{i}}">Style of Answer:</label>
+            <select required class="form-control" id="style_{{i}}" name="style_{{i}}" [ngModel]="question.style">
+              <option value="" disabled>Choose a style of answer</option>
+              <option value=1>Textbox</option>
+              <option value=2>Three option quality</option>
+            </select>
+        </div>
+
+        <div>
+          <a href="javascript:void(0);" (click)="addField()" class="surevy_button">Add Question</a>
+          <button type="submit" class="surevy_button btn_space">Submit</button>
+      </div>
+    </form>
+  </div>
+</div>

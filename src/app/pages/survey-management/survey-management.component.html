@@ -1,0 +1,27 @@
+<div class="body-wrapper">
+    <div class="center_form">
+    <div class="survey_description">
+    <app-base-page></app-base-page>
+    </div>
+  
+    <div *ngIf="this.auth.loggedIn">
+    <a href="javascript:void(0);" (click)="createSurvey()" class="card_button">Create</a>
+    </div>
+    <table>
+        <tr>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Answers</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+        <tr *ngFor='let survey of surveys'>
+            <td class="title_table">{{survey.title}}</td>
+            <td>{{survey.description}}</td>
+            <td><a href="javascript:void(0);" (click)="responseSurvey(survey)" class="editable_button" *ngIf="this.auth.loggedIn">☰</a></td>
+            <td><a href="javascript:void(0);" (click)="editSurvey(survey)" class="editable_button" *ngIf="this.auth.loggedIn">✎</a></td>
+            <td><a href="javascript:void(0);" (click)="deleteSurvey(survey._id)" class="editable_button" *ngIf="this.auth.loggedIn">✕</a></td>
+        </tr>
+    </table>
+    </div>
+  </div>
