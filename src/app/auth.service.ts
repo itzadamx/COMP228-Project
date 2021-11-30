@@ -10,7 +10,6 @@ export class AuthService {
 // Local url
  //private surveysUrl = 'http://localhost:3000/api/';
 // Heroku url
-//private surveysUrl = 'https://comp229test1.herokuapp.com/api/users';
 private surveysUrl = 'https://comp229-curvey-project.herokuapp.com/api/';
   constructor(private http: HttpClient) { }
   login(username: string, password: string): Observable<boolean> {
