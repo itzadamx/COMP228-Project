@@ -1,0 +1,29 @@
+<div class="body-wrapper">
+    <div class="center_form">
+    <div class="user_description">
+    <app-base-page></app-base-page>
+    </div>
+  
+    <div>
+    <a href="javascript:void(0);" (click)="createUser()" class="card_button" >Create</a>
+    </div>
+    <table>
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Username</th>
+            <th>Email</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+        <tr *ngFor='let user of users'>
+            <td>{{user.forename}}</td>
+            <td>{{user.surname}}</td>
+            <td>{{user.username}}</td>
+            <td>{{user.email}}</td>
+            <td class="button_align"><a href="javascript:void(0);" (click)="editUser(user)" class="editable_button">✎</a></td>
+            <td class="button_align"><a href="javascript:void(0);" (click)="deleteUser(user)" class="editable_button">✕</a></td>
+        </tr>
+    </table>
+</div>
+  </div>

@@ -1,0 +1,27 @@
+<div class="body-wrapper">
+<h1>Sign Up</h1>
+<div class="registration_form form_border">
+<form #form="ngForm" (ngSubmit)="onSubmit(form)">
+    <label for="forenameLable">First Name</label>
+    <input required type="text" class="form-control" id="forename" name="forename" [(ngModel)]="forename">
+
+    <div class="survey_label"><label for="surnameLable">Last Name</label></div>
+    <input required type="text" class="form-control" id="surname" name="surname" [(ngModel)]="surname">
+
+    <div class="survey_label"><label for="usernameLable">Username</label></div>
+    <input required type="text" class="form-control" id="username" name="username" [(ngModel)]="username">
+    
+    <div class="survey_label"><label for="nameLable">Email</label></div>
+    <input required type="email" class="form-control" id="email" name="email" [(ngModel)]="email">
+    
+    <div class="survey_label"><label for="passwordLable">Password</label></div>
+    <input required type="password" class="form-control" id="password" name="password" [(ngModel)]="password">
+     <br>
+    <div>
+        <button type="submit" class="survey_button">Sign Up</button>
+    </div>
+
+</form>
+</div>
+</div>
+

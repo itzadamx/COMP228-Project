@@ -1,0 +1,27 @@
+<div class="body-wrapper">
+    <div class="center_form card">
+        <form #form="ngForm" (ngSubmit)="onSubmit(form)">
+            <h3>{{survey.title}}</h3>
+            <p class="card-text">{{survey.description}}</p>
+            <div *ngFor='let question of survey.questions; index as i' class="form-group"> 
+                <label for="question_{{i}}_label">{{i+1}}&nbsp;{{question.label}}</label>
+                &nbsp;<input *ngIf="question.style==1" class="form-control" id="{{i}}" name="{{i}}" [ngModel]="question.value">
+
+
+               &nbsp; <div *ngIf="question.style==2">
+                    <input type="radio" id="NotGood" name="satisfaction" value="Not Good"  id="{{i}}"  name="{{i}}" [ngModel]="question.value">&nbsp;
+                    <label for="NotGood"> Bad</label><br>
+                    <input type="radio" id="Okay" name="satisfaction" value="Okay"  id="{{i}}"  name="{{i}}" [ngModel]="question.value">&nbsp;
+                    <label for="Okay"> Fair</label><br>
+                    <input type="radio" id="Good" name="satisfaction" value="Good"  id="{{i}}"  name="{{i}}" [ngModel]="question.value">&nbsp;
+                    <label for="Good"> Good</label><br>
+                </div>
+
+
+            </div>
+            <div>
+                <button type="submit" class="survey_button">Submit</button>
+            </div>
+        </form>
+    </div>
+</div>

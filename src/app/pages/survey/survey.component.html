@@ -1,0 +1,13 @@
+<div class="body-wrapper">
+  <div class="survey_description">
+  <app-base-page></app-base-page>
+  </div>
+
+  <div *ngFor='let survey of surveys' class="card card_survey"> 
+      <div class="card-body">
+        <h5 class="card-title">{{survey.title}}</h5>
+        <p class="card-text">{{survey.description}}</p>
+        <a href="javascript:void(0);" (click)="openSurvey(survey)" class="survey_button">Answer</a>
+      </div>
+  </div>
+</div>
